@@ -6,10 +6,6 @@ DatasetSense is a Python tool that performs **automated exploratory data analysi
 
 The project demonstrates **object-oriented programming (OOP)** concepts including **encapsulation, inheritance, polymorphism, composition, and dunder methods**.
 
-# Dataset Facade UML
-
-![Dataset UML](dataset_uml.png)
-
 ---
 
 ## 2. Team Members
@@ -78,6 +74,10 @@ data-narrator/
 ├─ README.md                # Project documentation
 └─ requirements.txt         # Python dependencies
 ```
+# Dataset Facade UML
+
+![Dataset UML](dataset_uml.png)
+
 ---
 
 | Requirement                                  | Project Implementation                                                                                                                                                                                                                                                                                      |
