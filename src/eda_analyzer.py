@@ -1,4 +1,4 @@
-# src/eda_analyzer.py
+# Base class + inheritance + polymorphism
 import pandas as pd
 import numpy as np
 
