@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-class QualityScorer:
+class DatasetPipeline:
     def __init__(self, eda_results, df_len):
         self.eda = eda_results
         self.df_len = df_len
