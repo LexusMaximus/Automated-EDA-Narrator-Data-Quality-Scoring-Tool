@@ -1,35 +1,22 @@
-# Preprocessor
+# Encapsulation + getters
 # src/preprocessor.py
-import pandas as pd
 from dateutil import parser
-from typing import List
 
 class Preprocessor:
-    def __init__(self, df: pd.DataFrame):
-        self.df = df.copy()
+    def __init__(self, df):
+        self._df = df.copy()          # protected
 
-    def trim_strings(self, cols: List[str]):
+    def trim_strings(self, cols):
         for c in cols:
-            if c in self.df:
-                self.df[c] = self.df[c].astype(str).str.strip()
+            if c in self._df:
+                self._df[c] = self._df[c].astype(str).str.strip()
         return self
 
-    def try_parse_dates(self, cols: List[str]):
+    def parse_dates(self, cols):
         for c in cols:
-            if c in self.df:
-                def _p(x):
-                    try:
-                        return parser.parse(x) if pd.notna(x) else x
-                    except Exception:
-                        return x
-                self.df[c] = self.df[c].apply(_p)
+            if c in self._df:
+                self._df[c] = self._df[c].apply(lambda x: parser.parse(x) if x and isinstance(x,str) else x)
         return self
 
-    def drop_constant_columns(self):
-        nunique = self.df.nunique(dropna=False)
-        const_cols = nunique[nunique <= 1].index.tolist()
-        self.df.drop(columns=const_cols, inplace=True)
-        return self
-
-    def get(self):
-        return self.df
+    def get_df(self):
+        return self._df
