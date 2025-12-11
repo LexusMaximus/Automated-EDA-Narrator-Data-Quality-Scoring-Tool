@@ -1,8 +1,8 @@
 # DatasetSense: Automated EDA Narrator + Data Quality Scoring Tool
 
 [![PyPI version](https://badge.fury.io/py/datasetsense.svg)](https://pypi.org/project/datasetsense/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 1. Project Overview
 DatasetSense is a Python tool that performs **automated exploratory data analysis (EDA)** and computes a **dataset quality score (0–100)**. It generates **human-readable insights** and produces a **markdown report** summarizing dataset characteristics and quality.  
@@ -237,7 +237,7 @@ except ValueError as e:
 
 ## 🏗️ System Architecture (UML)
 
-![Dataset UML](https://github.com/user-attachments/assets/ea671bbd-6a6e-4eda-af94-33f35daf2b2b)
+![Dataset UML](pics/dataset_uml.png)
 
 The UML expresses class collaboration via composition: 
 
@@ -248,7 +248,7 @@ The UML expresses class collaboration via composition:
 ## 🎓 Object-Oriented Design
 
 | OOP Concept        | How it's applied in DatasetSense                                                                                                                                                                             |
-|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Classes**        | There are **7 core classes**: `DataLoader`, `Preprocessor`, `EDAAnalyzer` (base), `NumericAnalyzer`/`CategoricalAnalyzer` (children), `QualityScorer`, `Narrator`, `ReportBuilder`, and `DatasetPipeline`. |
 | **Encapsulation**  | Protected attributes (e.g., `_df`, `_eda`, `_scores`) are used in classes. Getters like `get_df()` in `Preprocessor` and `get_weights()` in `QualityScorer` provide controlled access.                     |
 | **Inheritance**    | `NumericAnalyzer` and `CategoricalAnalyzer` **inherit** from `EDAAnalyzer`.                                                                                                                                 |
@@ -395,8 +395,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 ## 👥 Authors
-
-Created as part of an Object-Oriented Programming course project demonstrating practical application of OOP principles in data analysis.
 
 - **Mark Oraño**
 - **Jomar Ligas**
