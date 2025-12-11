@@ -1,3 +1,15 @@
+<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/24f98fd5-f0c4-46ab-b243-3c65dcf2b622" />
+<img width="1920" height="1080" alt="2" src="https://github.com/user-attachments/assets/bec9141f-2ea4-4c8c-9a79-cbfa335a58d7" />
+<img width="1920" height="1080" alt="3" src="https://github.com/user-attachments/assets/2fc72025-7b48-4ef0-8899-1cd6b572b058" />
+<img width="1920" height="1080" alt="4" src="https://github.com/user-attachments/assets/8aaa4d32-a7d3-4528-92e3-27dde9fa24fe" />
+<img width="1920" height="1080" alt="5" src="https://github.com/user-attachments/assets/3cbe67a9-aaf3-4b51-aeec-e00280c16113" />
+<img width="1920" height="1080" alt="6" src="https://github.com/user-attachments/assets/ee43d952-aff8-4c6a-90ad-3e72345b019d" />
+<img width="1920" height="1080" alt="7" src="https://github.com/user-attachments/assets/4665c6f1-db98-4d84-a024-114e06437b84" />
+<img width="1920" height="1080" alt="8" src="https://github.com/user-attachments/assets/4ccc88ac-0636-4544-a321-193f5826f671" />
+<img width="1920" height="1080" alt="9" src="https://github.com/user-attachments/assets/ea671bbd-6a6e-4eda-af94-33f35daf2b2b" />
+<img width="1920" height="1080" alt="10" src="https://github.com/user-attachments/assets/839655ed-b3bf-4cec-97ff-1f11f00787e7" />
+
+
 # DatasetSense: Automated EDA Narrator + Data Quality Scoring Tool
 
 [![PyPI version](https://badge.fury.io/py/datasetsense.svg)](https://pypi.org/project/datasetsense/)
