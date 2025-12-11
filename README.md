@@ -4,8 +4,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 
-![DatasetSense Banner](https://github.com/user-attachments/assets/24f98fd5-f0c4-46ab-b243-3c65dcf2b622)
-
 ## 1. Project Overview
 DatasetSense is a Python tool that performs **automated exploratory data analysis (EDA)** and computes a **dataset quality score (0–100)**. It generates **human-readable insights** and produces a **markdown report** summarizing dataset characteristics and quality.  
 
@@ -22,8 +20,6 @@ The project demonstrates **object-oriented programming (OOP)** concepts includin
 - Missing value analysis per feature
 - Duplicate row detection
 
-![EDA Analysis](https://github.com/user-attachments/assets/bec9141f-2ea4-4c8c-9a79-cbfa335a58d7)
-
 ### Data Quality Intelligence
 
 | Metric          | Basis                    | Default Weight |
@@ -36,8 +32,6 @@ The project demonstrates **object-oriented programming (OOP)** concepts includin
 - **Final Score:** Weighted 0–100 quality verdict (Excellent / Good / Fair / Poor)
 - **Customizable:** Supports custom weights for flexible scoring strategies
 
-![Quality Scores](https://github.com/user-attachments/assets/2fc72025-7b48-4ef0-8899-1cd6b572b058)
-
 ### Natural-Language Narration
 - Generates explanation of dataset shape, variability, missing values, outliers & verdict
 - Converts analysis metrics into human-readable insights
@@ -46,8 +40,6 @@ The project demonstrates **object-oriented programming (OOP)** concepts includin
 - Markdown export (.md)
 - CLI configurable output
 - Integrates narratives + scores + stats into a clean report
-
-![Report Output](https://github.com/user-attachments/assets/8aaa4d32-a7d3-4528-92e3-27dde9fa24fe)
   
 ---
 
@@ -69,8 +61,6 @@ pipeline = DatasetPipeline("your_data.csv")
 report = pipeline.run()
 print(report)
 ```
-
-![Installation](https://github.com/user-attachments/assets/3cbe67a9-aaf3-4b51-aeec-e00280c16113)
 
 ### Option 2: Install from GitHub (Development)
 
@@ -105,8 +95,6 @@ report = pipeline.run()
 print(report)
 ```
 
-![Quick Start](https://github.com/user-attachments/assets/ee43d952-aff8-4c6a-90ad-3e72345b019d)
-
 ### Using Custom Weights
 
 ```python
@@ -137,8 +125,6 @@ python -m src.cli data/sample.csv --out reports/sample_report.md
 # With custom weights (JSON format)
 python -m src.cli data/sample.csv --weights '{"missing":0.5,"duplicates":0.1,"outliers":0.2,"balance":0.2}'
 ```
-
-![CLI Usage](https://github.com/user-attachments/assets/4665c6f1-db98-4d84-a024-114e06437b84)
 
 ---
 
@@ -180,8 +166,6 @@ print(report)
 | outliers   | 25.0%  |
 | balance    | 25.0%  |
 ```
-
-![Example Output](https://github.com/user-attachments/assets/4ccc88ac-0636-4544-a321-193f5826f671)
 
 ### Example 2: Compare Multiple Weight Configurations
 
@@ -253,7 +237,7 @@ except ValueError as e:
 
 ## 🏗️ System Architecture (UML)
 
-![System Architecture](https://github.com/user-attachments/assets/ea671bbd-6a6e-4eda-af94-33f35daf2b2b)
+![Dataset UML](https://github.com/user-attachments/assets/ea671bbd-6a6e-4eda-af94-33f35daf2b2b)
 
 The UML expresses class collaboration via composition: 
 
@@ -271,8 +255,6 @@ The UML expresses class collaboration via composition:
 | **Polymorphism**   | `run_all()` is **overridden** in `NumericAnalyzer` and `CategoricalAnalyzer` to handle numeric vs categorical data differently.                                                                             |
 | **Dunder Methods** | `DataLoader` has `__repr__`, `__eq__`, `__len__`; `DatasetPipeline` has `__repr__`.                                                                                                                         |
 | **Composition**    | `DatasetPipeline` **contains/uses** instances of `DataLoader`, `Preprocessor`, `EDAAnalyzer`, `QualityScorer`, `Narrator`, `ReportBuilder`.                                                                 |
-
-![OOP Concepts](https://github.com/user-attachments/assets/839655ed-b3bf-4cec-97ff-1f11f00787e7)
 
 ---
 
@@ -421,12 +403,3 @@ Created as part of an Object-Oriented Programming course project demonstrating p
 - **Lex Lumantas**
 - **Philip Tupas**
 - **Josh Ganhinhin**
-
----
-
-## 📮 Support
-
-If you encounter any issues or have questions:
-1. Check the [Demo notebook](https://colab.research.google.com/github/LexusMaximus/Automated-EDA-Narrator-Data-Quality-Scoring-Tool/blob/main/Demo.ipynb)
-2. Open an issue on [GitHub](https://github.com/LexusMaximus/Automated-EDA-Narrator-Data-Quality-Scoring-Tool/issues)
-3. Review the [PyPI package page](https://pypi.org/project/datasetsense/)
